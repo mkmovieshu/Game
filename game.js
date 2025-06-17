@@ -75,3 +75,18 @@ function movePiece(stepsToMove) {
   piece.position.x = Math.cos(angle) * radius;
   piece.position.z = Math.sin(angle) * radius;
 }
+// Existing light line change this:
+const light = new THREE.PointLight(0xffffff, 1, 100);
+
+// Change to:
+const light = new THREE.PointLight(0xffffff, 2, 500); // brighter and longer range
+light.position.set(10, 30, 20); // higher and visible
+scene.add(light);
+
+// Add ambient light too:
+const ambient = new THREE.AmbientLight(0x888888); // soft light to fill shadows
+scene.add(ambient);
+
+// And camera zoom-out a bit
+camera.position.set(0, 12, 18);
+
