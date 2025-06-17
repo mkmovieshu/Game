@@ -89,4 +89,14 @@ scene.add(ambient);
 
 // And camera zoom-out a bit
 camera.position.set(0, 12, 18);
+// Renderer improvement
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+
+// Optional: Adjust camera on window resize
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
 
