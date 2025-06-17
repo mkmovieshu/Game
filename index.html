@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini 3D Ludo</title>
+  <style>
+    body { margin: 0; overflow: hidden; background: #111; color: white; }
+    #ui {
+      position: absolute;
+      top: 20px; left: 20px;
+      z-index: 10;
+    }
+    button {
+      font-size: 18px;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div id="ui">
+    <button onclick="rollDice()">🎲 Roll Dice</button>
+    <p id="diceValue">Value: </p>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
